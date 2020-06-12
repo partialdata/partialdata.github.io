@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 
-ul { padding: 0; }
+ul { padding: 0;   list-style-type: none; }
 a:hover { text-decoration: none; }
 button:focus { outline: none; }
 p { line-height: 1.9; }
