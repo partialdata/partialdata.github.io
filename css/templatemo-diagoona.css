@@ -15,6 +15,10 @@ body {
     background-color: #2C353C;
 }
 
+a {
+    color: whitesmoke;
+}
+
 a { 
     transition: all 0.3s ease; 
     text-decoration: none;
