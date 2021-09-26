@@ -952,6 +952,8 @@ img {
     color: #FFF;
 }
 
+
+
 /*========== SCROLL UP ==========*/
 .scrollup {
     position: fixed;
@@ -1309,58 +1311,3 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
-@media screen and (min-width: 800px) {
-    .row {
-        height: 600px;
-    }
-
-    .img {
-        height: 50%;
-    }
-
-    .img-1,
-    .img-4 {
-        width: 24%;
-    }
-
-    .img-2,
-    .img-3 {
-        width: 70%;
-    }
-}
-
-    .row {
-        width: 100%;
-        height: 100%;
-        max-width: 1000px;
-        margin: 10px 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .img {
-        height: 50%;
-        margin: 10px;
-        box-shadow: 10px 14px 20px 0px rgba(226, 204, 189, 1);
-    }
-
-
-    .img-1 {
-        background: url('https://partialdata.com/assets/img/CosmicClicker.png') no-repeat center center;
-        background-size: cover;
-        width: 100%;
-    }
-
-    .img-2 {
-        background: url('https://partialdata.com/assets/img/killerGame.png') no-repeat center center;
-        background-size: cover;
-        width: 100%;
-    }
-
-    .img-3 {
-        background: url('https://partialdata.com/assets/img/Satisfying-Fidget-Obby.png') no-repeat center center;
-        background-size: cover;
-        width: 100%;
-    }
