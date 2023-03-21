@@ -4,32 +4,11 @@ body {
 
 }
 
-/* For larger screens */
-img {
-  display: block;
-  margin: auto;
-  padding-top: 50px;
+.gif-container {
   max-width: 100%;
-  height: auto;
-  border-radius: 20%;
-}
-
-/* For smaller screens */
-@media (max-width: 767px) {
-  body {
-    background-color: #282a36;
-    color: #f8f8f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  img {
-    margin-top: 50px;
-  }
+  max-height: 100%;
+  display: block;
+  object-fit: cover; /* optional */
 }
 
 
