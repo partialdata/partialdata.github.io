@@ -1,45 +1,13 @@
 body {
   background-color: #282a36;
   color: #f8f8f2;
-
 }
 
 .gif-container {
-  max-width: 100%;
-  max-height: 100%;
   display: block;
-  object-fit: cover; /* optional */
+
 }
 
-
-h1 {
-  font-size: 2.5em;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1.5em;
-  margin-bottom: 30px;
-}
-
-.output pre {
-  background-color: #282a36;
-  position: static;
-  bottom: 0;
-  width: 100%;
-  padding: 20px 20px 0 20px;
-  box-sizing: border-box;
-}
-
-
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
+.gif-container img {
+  border-radius: 50%;
 }
