@@ -1,0 +1,23 @@
+{
+  "name": "partialdata_blog",
+  "type": "module",
+  "version": "0.0.1",
+  "homepage": "https://partialdata.github.io",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "predeploy": "astro build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^2.4.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
