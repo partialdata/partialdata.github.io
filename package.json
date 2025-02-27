@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "deploy": "gh-pages -d build"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
