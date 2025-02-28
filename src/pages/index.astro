@@ -1,6 +1,93 @@
 ---
-import Counter from '../components/Counter.jsx';
+import "../styles/global.css"; 
+import Avatar from "../components/Avatar";
 ---
 
-<h1>HI :)</h1>
-<Counter client:load />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan's Portfolio</title>
+  </head>
+  <body class="bg-[#282a36] text-white">
+
+    <!-- Navigation Menu -->
+    <nav class="bg-gray-800 fixed top-0 left-0 w-full shadow-md z-10">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <h1 class="text-lg font-bold text-[#bd93f9]">Ryan's Portfolio</h1>
+        <button id="menu-toggle" class="text-white text-2xl md:hidden">☰</button>
+        <ul id="nav-links" class="hidden md:flex space-x-6 text-lg font-semibold">
+          <li><a href="/" class="hover:text-gray-400 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-gray-400 transition">About</a></li>
+          <li><a href="#projects" class="hover:text-gray-400 transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Mobile Navigation -->
+      <ul id="mobile-menu" class="hidden flex flex-col space-y-4 text-center bg-gray-900 py-4 md:hidden">
+        <li><a href="/" class="hover:text-gray-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-gray-400 transition">About</a></li>
+        <li><a href="#projects" class="hover:text-gray-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Page Wrapper (Ensures Vertical Stacking) -->
+    <div class="flex flex-col items-center w-full mt-16 space-y-20">
+
+      <!-- Hero Section -->
+      <header class="flex flex-col items-center text-center w-full px-6">
+        <Avatar/>
+        <h1 class="text-3xl font-bold mt-4 text-[#bd93f9] sm:text-4xl">Welcome to My Portfolio</h1>
+        <p class="text-md text-gray-300 mt-2 sm:text-lg">
+          Software Engineer | Tech Enthusiast | Creator
+        </p>
+      </header>
+
+      <!-- About Section -->
+      <section id="about" class="w-full text-center px-6">
+        <h2 class="text-2xl font-bold text-[#ff79c6] sm:text-3xl">About Me</h2>
+        <p class="mt-4 text-gray-400 text-lg sm:max-w-md sm:mx-auto">
+          I am a passionate software engineer who loves building interactive web experiences.
+        </p>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="w-full text-center px-6 bg-gray-900 py-12">
+        <h2 class="text-2xl font-bold text-[#8be9fd] sm:text-3xl">Projects</h2>
+        <p class="mt-4 text-gray-400 text-lg sm:max-w-md sm:mx-auto">
+          Here are some of my projects...
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="w-full text-center px-6">
+        <h2 class="text-2xl font-bold text-[#50fa7b] sm:text-3xl">Contact</h2>
+        <p class="mt-4 text-gray-400 text-lg sm:max-w-md sm:mx-auto">
+          You can reach me via email at <span class="text-[#f1fa8c]">contact@example.com</span>.
+        </p>
+      </section>
+
+    </div>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking a link
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+
+  </body>
+</html>
