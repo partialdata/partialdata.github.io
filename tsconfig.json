@@ -1,7 +1,8 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
+  "display": "theme/sleek",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "types": ["astro/client"],
+    "baseUrl": "."
   }
 }
