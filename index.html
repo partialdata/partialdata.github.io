@@ -8,6 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --dracula-bg: #282a36;
+      --dracula-fg: #f8f8f2;
+      --dracula-purple: #bd93f9;
+      --dracula-current-line: #44475a;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -15,21 +22,51 @@
     }
     html, body {
       height: 100%;
-      background-color: #0a0a0a;
-      color: #f5f5f5;
+      background-color: var(--dracula-bg);
+      color: var(--dracula-fg);
       font-family: 'Orbitron', sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--dracula-current-line);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--dracula-purple);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     header {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       font-size: 12vw;
       text-align: center;
       padding: 2rem;
-      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      background: var(--dracula-current-line);
+    }
+    header img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid var(--dracula-purple);
+      margin-bottom: 1rem;
     }
     section {
       min-height: 100vh;
@@ -42,9 +79,6 @@
       border-top: 1px solid #222;
       text-align: center;
     }
-    .cursor {
-      display: none;
-    }
 
     @media (min-width: 768px) {
       header {
@@ -53,36 +87,23 @@
       section {
         font-size: 2rem;
       }
-      .cursor {
-        display: block;
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background-color: #00ffe0;
-        border-radius: 50%;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: transform 0.1s ease;
-        z-index: 9999;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="cursor" id="cursor"></div>
+  <nav>
+    <a href="#welcome">Welcome</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Connect</a>
+  </nav>
+
   <header>
+    <img src="img/partialdatanew.jpg" alt="Avatar" />
     PartialData
   </header>
-  <section style="background-color:#121212;">Welcome to my mind.</section>
-  <section style="background-color:#1a1a1a;">Projects coming soon.</section>
-  <section style="background-color:#121212;">Let’s connect.</section>
 
-  <script>
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    });
-  </script>
+  <section id="welcome" style="background-color: var(--dracula-bg);">Welcome to my mind.</section>
+  <section id="projects" style="background-color: var(--dracula-current-line);">Projects coming soon.</section>
+  <section id="contact" style="background-color: var(--dracula-bg);">Let’s connect.</section>
 </body>
 </html>
