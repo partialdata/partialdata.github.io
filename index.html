@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Title: PartialData -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -23,33 +22,49 @@
       scroll-behavior: smooth;
     }
     header {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 5rem;
+      font-size: 12vw;
       text-align: center;
+      padding: 2rem;
       background: linear-gradient(to right, #0f0f0f, #1a1a1a);
     }
     section {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2rem;
+      font-size: 6vw;
+      padding: 2rem;
       scroll-snap-align: start;
       border-top: 1px solid #222;
+      text-align: center;
     }
     .cursor {
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      background-color: #00ffe0;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s ease;
-      z-index: 9999;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        font-size: 5rem;
+      }
+      section {
+        font-size: 2rem;
+      }
+      .cursor {
+        display: block;
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: #00ffe0;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease;
+        z-index: 9999;
+      }
     }
   </style>
 </head>
